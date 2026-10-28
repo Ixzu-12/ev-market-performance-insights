@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Electric Vehicle Market Performance & Insights — Flask App
 
 ## Included
@@ -75,3 +76,7 @@ The `/tableau` page is preconfigured with the published EV Sales Book views prov
 - Story 3: `https://public.tableau.com/views/EVSALESBOOK/Story3`
 
 Run Flask and open `http://127.0.0.1:5000/tableau` to view the embedded dashboard and all three story views. The links can be overridden with `TABLEAU_DASHBOARD_URL`, `TABLEAU_STORY1_URL`, `TABLEAU_STORY2_URL`, and `TABLEAU_STORY3_URL` environment variables.
+=======
+# ev-market-performance-insights
+Python Flask dashboard for electric vehicle market analysis, featuring interactive Plotly visualizations, sales and pricing insights, battery-range analysis, and Tableau Public integration.
+>>>>>>> cd713627a2f4437e2908b2cc37d71df85cc7930a
