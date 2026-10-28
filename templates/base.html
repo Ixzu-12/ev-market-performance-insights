@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}EV Market Insights{% endblock %}</title>
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <style>
+    :root{--ink:#172033;--muted:#64748b;--blue:#2563eb;--line:#e2e8f0;--bg:#f7f9fc}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);font:15px/1.5 Arial,sans-serif;color:var(--ink)}
+    header{background:white;border-bottom:1px solid var(--line);padding:18px 4vw;display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+    header h1{font-size:22px;margin:0}nav{display:flex;gap:18px}nav a{color:var(--ink);text-decoration:none;font-weight:600}
+    main{max-width:1440px;margin:auto;padding:28px 4vw 48px}.intro{display:flex;justify-content:space-between;gap:16px;align-items:flex-end;flex-wrap:wrap}
+    h2{margin:0 0 8px;font-size:26px}.sub{color:var(--muted);margin:0 0 20px}
+    .filters,.card,.chart,.story-card{background:white;border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:0 2px 8px #0f172a08}
+    .filters{display:flex;gap:12px;align-items:end;flex-wrap:wrap;margin:18px 0}
+    label{display:block;color:var(--muted);font-size:12px;margin-bottom:5px}select,button{padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;background:white}
+    button{background:var(--blue);color:white;border-color:var(--blue);font-weight:700;cursor:pointer}
+    .kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:18px 0}
+    .kpi small{color:var(--muted)}.kpi strong{display:block;font-size:25px;margin-top:7px}
+    .charts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.chart{min-width:0;overflow:hidden}
+    .story-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.story-card h3{margin-top:0}
+    .pill{display:inline-block;background:#dbeafe;color:#1d4ed8;border-radius:99px;padding:4px 10px;font-size:12px;font-weight:700}
+    .note{color:var(--muted);font-size:13px}.empty{padding:20px;background:#fffbeb;border:1px solid #fde68a;border-radius:10px}
+    iframe{width:100%;height:75vh;border:0;border-radius:12px;background:white}
+    @media(max-width:800px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.charts,.story-grid{grid-template-columns:1fr}header h1{font-size:18px}}
+  </style>
+</head>
+<body>
+<header><h1>⚡ Electric Vehicle Market Performance &amp; Insights</h1>
+<nav><a href="/">Dashboard</a><a href="/story">Data Story</a><a href="/tableau">Tableau Embed</a></nav></header>
+<main>{% block content %}{% endblock %}</main>
+</body></html>

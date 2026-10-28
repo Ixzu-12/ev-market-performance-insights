@@ -1,0 +1,22 @@
+{
+  "training_rows": 200000,
+  "test_rows": 100000,
+  "columns": 37,
+  "missing_cells": 18996,
+  "missing_percent_cells": 0.257,
+  "duplicate_rows": 1,
+  "unique_vehicle_ids": 199999,
+  "mean_range_km": 324.5,
+  "median_range_km": 337.9,
+  "mean_price_usd": 64920.53,
+  "median_price_usd": 42814.93,
+  "mean_customer_rating": 4.09,
+  "battery_range_correlation": 0.267,
+  "highest_avg_range_category": "Luxury Sedan",
+  "highest_avg_range_km": 550.6,
+  "lowest_avg_efficiency_category": "Two-Wheeler Scooter",
+  "highest_avg_sales_manufacturer": "AmpereWorks",
+  "highest_avg_sales_units": 8968.9,
+  "highest_total_sales_region": "South Asia",
+  "annual_sales_max": 1066612.0
+}

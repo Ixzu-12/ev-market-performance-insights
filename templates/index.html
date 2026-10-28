@@ -1,0 +1,21 @@
+{% extends "base.html" %}{% block title %}EV Market Dashboard{% endblock %}
+{% block content %}
+<div class="intro"><div><span class="pill">MARKET OVERVIEW</span><h2>Electric Vehicle Market Dashboard</h2>
+<p class="sub">Explore sales, pricing, range, battery technology and regional demand.</p></div></div>
+<form class="filters" method="get">
+  <div><label for="region">Market region</label><select id="region" name="region">{% for r in regions %}<option value="{{r}}" {% if r==region %}selected{% endif %}>{{r}}</option>{% endfor %}</select></div>
+  <div><label for="category">Vehicle category</label><select id="category" name="category">{% for c in categories %}<option value="{{c}}" {% if c==category %}selected{% endif %}>{{c}}</option>{% endfor %}</select></div>
+  <button type="submit">Apply filters</button><a href="/" style="padding:10px;color:#2563eb">Reset</a>
+</form>
+<div class="kpis">
+ <div class="card kpi"><small>Vehicles analysed</small><strong>{{ "{:,}".format(total) }}</strong></div>
+ <div class="card kpi"><small>Average range</small><strong>{{ "{:,.0f}".format(avg_range) }} km</strong></div>
+ <div class="card kpi"><small>Average price</small><strong>${{ "{:,.0f}".format(avg_price) }}</strong></div>
+ <div class="card kpi"><small>Average customer rating</small><strong>{{ "%.2f"|format(avg_rating) }}/5</strong></div>
+</div>
+<div class="charts">
+ <section class="chart">{{ chart_sales|safe }}</section><section class="chart">{{ chart_price|safe }}</section>
+ <section class="chart">{{ chart_scatter|safe }}</section><section class="chart">{{ chart_region|safe }}</section>
+</div>
+<p class="note">Source: supplied EV market training dataset. Sales are recorded annual sales units; all prices are in USD. Charts are descriptive, not causal.</p>
+{% endblock %}

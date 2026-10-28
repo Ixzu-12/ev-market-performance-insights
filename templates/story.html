@@ -1,0 +1,12 @@
+{% extends "base.html" %}{% block title %}EV Market Story{% endblock %}
+{% block content %}
+<span class="pill">DATA STORY</span><h2>What the EV market data tells us</h2>
+<p class="sub">A short, evidence-led narrative generated from the supplied training dataset.</p>
+<div class="story-grid">
+ <article class="story-card"><h3>01 · Range and battery capacity</h3><p>The dataset contains <b>{{ "{:,}".format(n) }}</b> vehicle records. Average stated range is <b>{{ "{:,.1f}".format(avg_range) }} km</b>.</p><p>Battery capacity and range have a Pearson correlation of <b>{{ "%.2f"|format(corr) }}</b>. This describes an association in this dataset and should not be interpreted as proof that capacity alone determines range.</p></article>
+ <article class="story-card"><h3>02 · Pricing landscape</h3><p>The median listed vehicle price is <b>${{ "{:,.0f}".format(median_price) }}</b>. Compare price by vehicle category and market region on the dashboard before drawing conclusions about affordability.</p></article>
+ <article class="story-card"><h3>03 · Category opportunities</h3><p><b>{{ best_category }}</b> has the highest average range in the dataset at approximately <b>{{ "{:,.1f}".format(best_range) }} km</b>. Use this as a lead for further analysis, checking category sample sizes and outliers.</p><p><b>{{ efficient }}</b> has the lowest average energy use in Wh/km among categories in this dataset.</p></article>
+ <article class="story-card"><h3>04 · Sales leaders</h3><p><b>{{ best_sales_mfr }}</b> has the highest average annual sales per record at approximately <b>{{ "{:,.0f}".format(best_sales) }}</b> units.</p><p>Recommendation: validate this pattern by region, vehicle category, and model year before using it for investment or product strategy.</p></article>
+</div>
+<div class="empty" style="margin-top:18px"><b>Decision takeaway:</b> Segment the market before comparing EVs. Range, price, efficiency and sales vary by category and region; avoid using a single overall average to make product decisions.</div>
+{% endblock %}

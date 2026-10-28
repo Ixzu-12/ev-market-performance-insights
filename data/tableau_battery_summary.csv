@@ -1,0 +1,6 @@
+battery_type,vehicle_records,avg_capacity_kwh,avg_range_km,avg_efficiency_wh_per_km,avg_degradation_pct_5yr,avg_fast_charge_minutes
+LFP,64036,78.322,324.155,251.145,10.129,21.075
+NCA,34099,77.914,325.045,248.929,14.039,21.087
+NMC,67673,78.254,324.336,250.433,14.026,21.073
+Sodium-Ion,20089,78.087,325.894,248.357,14.005,20.975
+Solid-State,14103,78.835,324.071,253.158,7.441,21.170
